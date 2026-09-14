@@ -20,15 +20,15 @@ export default function Navbar({ onOpenCV }: NavbarProps) {
   };
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, padding: '16px 24px', pointerEvents: 'none' }}>
+    <div className="navbar-container" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, pointerEvents: 'none' }}>
       <nav className={`navbar-capsule ${scrolled ? 'scrolled' : ''}`}>
         <a href="#" className="nav-logo">
           <img
             src="/profile.jpg"
             alt="Thiru Dev Avatar"
-            style={{ width: 34, height: 34, borderRadius: '50%', border: '2px solid #0284c7', objectFit: 'cover', aspectRatio: '1 / 1', flexShrink: 0 }}
+            className="nav-avatar-img"
           />
-          THIRU <span>DEV</span>
+          <span className="nav-logo-text">THIRU <span>DEV</span></span>
         </a>
 
         <div className="nav-links">
