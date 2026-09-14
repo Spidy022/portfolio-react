@@ -39,7 +39,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
 
         {/* Scrollable Complete Resume Content */}
-        <div className="resume-body-scroll" onWheel={e => e.stopPropagation()}>
+        <div className="resume-body-scroll" onWheel={e => e.stopPropagation()} onTouchMove={e => e.stopPropagation()}>
           {/* Header Info Banner featuring Real Portrait */}
           <div className="resume-header-card">
             <img src="/profile.jpg" alt="Thiru Dev Real Portrait" className="resume-avatar-img" />

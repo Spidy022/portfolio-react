@@ -28,7 +28,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyMod
         </div>
 
         {/* Policy Content */}
-        <div className="resume-body-scroll">
+        <div className="resume-body-scroll" onWheel={e => e.stopPropagation()} onTouchMove={e => e.stopPropagation()}>
           <div className="resume-section">
             <h3 className="resume-section-title"><Lock size={16} color="#38bdf8" /> 1. Data Collection &amp; Purpose</h3>
             <p className="resume-desc">
