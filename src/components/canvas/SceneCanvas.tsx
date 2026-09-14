@@ -86,12 +86,14 @@ interface SceneCanvasProps {
 }
 
 export default function SceneCanvas({ onOpenCV }: SceneCanvasProps) {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
       <Canvas
-        camera={{ position: [0, 0, 12], fov: 60 }}
-        dpr={[1, 1.75]}
-        gl={{ antialias: true, alpha: true }}
+        camera={{ position: [0, 0, isMobile ? 14 : 12], fov: isMobile ? 70 : 60 }}
+        dpr={[1, isMobile ? 1.25 : 1.75]}
+        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       >
         <color attach="background" args={['#f8fafc']} />
         <fog attach="fog" args={['#f8fafc', 8, 45]} />

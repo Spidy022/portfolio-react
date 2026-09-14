@@ -56,7 +56,7 @@ export default function Projects3D() {
           {/* Spatial Pearl Glass Project Card */}
           <Html
             transform
-            distanceFactor={3}
+            distanceFactor={typeof window !== 'undefined' && window.innerWidth < 768 ? 4.2 : 3}
             position={[0, 0, 0]}
             style={{
               width: '340px',

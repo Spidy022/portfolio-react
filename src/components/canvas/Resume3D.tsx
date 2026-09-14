@@ -22,7 +22,7 @@ export default function Resume3D({ onOpenCV }: Resume3DProps) {
       {/* 3D Spatial Pearl Glass Resume Document Card */}
       <Html
         transform
-        distanceFactor={3.2}
+        distanceFactor={typeof window !== 'undefined' && window.innerWidth < 768 ? 4.2 : 3.2}
         position={[0, 0, 0]}
         style={{
           width: '320px',
